@@ -1,0 +1,34 @@
+# Docker volumes and data
+**/data/
+**/grafana-data/
+**/prometheus-data/
+
+# Environment files
+.env
+.env.*
+
+# Log files
+*.log
+logs/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if using any Node.js tools)
+node_modules/
+
+# Compiled files
+*.pyc
+__pycache__/

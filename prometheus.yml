@@ -1,0 +1,21 @@
+global:
+  scrape_interval: 15s
+  external_labels:
+    monitor: 'kkweli-monitoring'
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['127.0.0.1:9090'] # Target Prometheus using explicit IPv4
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance  
+  
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['monitoring-node-exporter:9100']  # Use Docker service name
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
