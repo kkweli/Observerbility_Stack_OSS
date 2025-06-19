@@ -151,4 +151,4 @@ docker-compose restart [service_name]
 
 ## License
 
-[Add your license information here]
+Free Open Source Licence
